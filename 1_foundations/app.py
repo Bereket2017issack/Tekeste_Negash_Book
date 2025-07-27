@@ -88,7 +88,7 @@ class Me:
             text = page.extract_text()
             if text:
                 self.history_book += text
-        with open("me/summary_bere.txt", "r", encoding="utf-8") as f:
+        with open("1_foundations/me/summary_bere.txt", "r", encoding="utf-8") as f:
             self.summary = f.read()
 
 
