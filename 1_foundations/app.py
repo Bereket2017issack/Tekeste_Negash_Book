@@ -82,7 +82,7 @@ class Me:
         #self.openai = OpenAI()
         self.name = "Tekeste Negash"
         self.book = "Eritrea and Ethiopia: The Federal Experience"
-        reader = PdfReader("me/tekeste_mesfin.pdf")
+        reader = PdfReader("1_foundations/me/tekeste_mesfin.pdf")
         self.history_book = ""
         for page in reader.pages:
             text = page.extract_text()
