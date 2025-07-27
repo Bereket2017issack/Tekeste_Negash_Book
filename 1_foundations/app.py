@@ -136,12 +136,9 @@ If the user is engaging in discussion, try to steer them towards getting in touc
 
 if __name__ == "__main__":
     me = Me()
-    ports_to_try = [7860, 7861, 8501, 5000, 8080, 9000, 8888]
-    for port in ports_to_try:
-        try:
-            gr.ChatInterface(me.chat, type="messages").launch(share=True, server_port=port)
-            break
-        except OSError as e:
-            print(f"Port {port} is unavailable, trying next...")
-    #gr.ChatInterface(me.chat, type="messages").launch(share=True)
+    gr.ChatInterface(me.chat, type="messages").launch(
+        share=True,
+        server_port=7860,         # or another port if 7860 is busy
+        server_name="0.0.0.0"     # this is the key part!
+    )
     
